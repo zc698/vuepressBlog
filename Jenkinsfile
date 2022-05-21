@@ -10,5 +10,24 @@ pipeline {
                     '''
                 }
             }
+            stage('Deploy') {
+                steps {
+                    timeout(time: 3, unit:'MINUTES'){
+                        retry(5) {
+                            sh './flakey-deploy.sh'
+                        }
+                    }
+                }
+            }
+            post {
+                always {
+                    echo 'This will always run'
+                }
+                success {
+                    echo 'This will run only if successful'
+                }
+            }
+
+
     }
 }
