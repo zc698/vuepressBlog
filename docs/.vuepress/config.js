@@ -1,5 +1,5 @@
 module.exports = {
-  title: '个人主页',
+  title: '个人博客',
   description: 'Personal Website',
   head: [ // 注入到当前页面的 HTML <head> 中的标签
     ['link', { rel: 'icon', href: '/images/photo.jpg' }],
@@ -19,7 +19,7 @@ module.exports = {
       {text: '前端基础', link: '/accumulate/' },
       {text: '算法题库', link: '/algorithm/'},
       {text: '诗和远方', link: '/others/'},
-      {text: '微博', link: 'https://baidu.com'}      
+      {text: 'Github', link: 'https://github.com/zc698/zc698.github.io'}
     ],
     // sidebar:{
     //   '/accumulate/': [
@@ -51,6 +51,6 @@ module.exports = {
     //     ]
     // },
     sidebar: 'auto', // 侧边栏配置
-    sidebarDepth: 2
+    sidebarDepth: 2, //侧边栏显示2级
   }
 };
