@@ -18,15 +18,16 @@ pipeline {
                         }
                     }
                 }
-            }
-            post {
-                always {
-                    echo 'This will always run'
+                post {
+                    always {
+                        echo 'This will always run'
+                    }
+                    success {
+                        echo 'This will run only if successful'
+                    }
                 }
-                success {
-                    echo 'This will run only if successful'
-                }
             }
+
 
 
     }
