@@ -78,22 +78,15 @@
 四、	创建TestNG测试集合
 1.	测试集合：在自动化测试的执行过程中，通常会产生批量运行多个测试用例的需求，此需求称为运行测试集合（Test Suite）
 2.	Test NG的测试用例可以是相互独立的，也可以按照特定的顺序来执行（配置TestNG.xml）
-
-3.	配置testNG.xml文件
-
-执行多组分组时配置：
-
-在testng.xml中，可以控制测试用例按顺序执行。  当preserve-order="true"是，可以保证节点下面的方法是按顺序执行的
-
-
-在xml里面使用<include>指定需要执行的方法和顺序
-
-
-五、	依赖测试（dependsOnMethods）
+````
+3.配置testNG.xml文件执行多组分组时配置在testng.xml中，可以控制测试用例按顺序执行。  当preserve-order="true"是，可以保证节点下面的方法是按顺序执行的在xml里面使用<include>指定需要执行的方法和顺序
+````
+五、依赖测试（dependsOnMethods）
+```
 @Test(dependsOnMethods={“方法名称”})
 被依赖的方法优先于此方法执行
-
-六、	特定顺序执行测试用例（priority）
+```
+六、特定顺序执行测试用例（priority）
 @Test（priority=0/1/2/3/4/…）
 按照数字大小顺序优先执行，优先执行1，然后是2…
 
@@ -171,8 +164,7 @@ private PrimeNumberChecker primeNumberChecker;
 	System.out.println(inputNumber + " " + expectedResult);
 	Assert.assertEquals(expectedResult,
         	primeNumberChecker.validate(inputNumber));
-    }
-}
+    }}
 3.	创建TESTNG.XML
       创建 testng.xml suite name="Suite1"
       
